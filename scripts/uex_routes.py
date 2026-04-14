@@ -360,7 +360,7 @@ def main():
             for t in terminals[:15]:  # Sample key terminals
                 tid = t['id']
                 tname = t.get('displayname') or t.get('name', '')
-                ship_containers = {1,2,4,6,8,12,16,32}  # Default cargo containers
+                ship_containers = "1,2,4,6,8,12,16,32"  # Default cargo containers
                 ship_scu = 512  # Default
 
                 try:
