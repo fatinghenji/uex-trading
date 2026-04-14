@@ -28,6 +28,19 @@
 pip install requests
 ```
 
+### 配置 API Key
+
+本工具使用 UEX API，需要设置环境变量：
+
+```bash
+# 获取你的 UEX API Key: https://api.uexcorp.space/
+export UEX_API_KEY="你的API密钥"
+
+# 运行前设置
+export UEX_API_KEY="你的API密钥"
+python scripts/uex_routes.py top
+```
+
 ### 克隆仓库
 
 ```bash

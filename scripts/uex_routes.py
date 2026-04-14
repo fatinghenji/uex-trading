@@ -9,12 +9,15 @@ import requests
 import json
 import sys
 import io
+import os
 from typing import Optional, List, Dict, Any
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 BASE_URL = "https://api.uexcorp.space/v2.1"
-API_KEY = "3fe914cbfc8da5a6c0103e9c5462aaf180e12a42"
+API_KEY = os.environ.get("UEX_API_KEY", "")
+if not API_KEY:
+    raise RuntimeError("请设置环境变量 UEX_API_KEY 才能使用本工具")
 HEADERS = {"secret_key": API_KEY}
 
 
